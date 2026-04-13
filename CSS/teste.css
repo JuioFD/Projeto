@@ -1,0 +1,29 @@
+#cadastro {
+    position: fixed;
+    top: 20px;
+    right: 200px;
+}
+
+#contato {
+    position: fixed;
+    top: 20px;
+    right: 280px;
+}
+
+#sobre {
+    position: fixed;
+    top: 20px;
+    right: 375px;
+}
+
+#procura {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+}
+
+.btnbuscar {
+    position: fixed;
+    top: 45px;
+    right: 10px;
+}
