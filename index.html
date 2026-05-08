@@ -4,31 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja de Materiais Esportivos</title>
+    <title> Noventa Minutos</title>
     <link rel="stylesheet" href="CSS/teste.css">
 </head>
 
 <body>
 
-    <header>
+    <header class="topo">
 
-        <h2 id="tituloPrincipal"> Roupas e Artigos Esportivos aqui! ⚽ </h2>
+        <div class="texto-topo">
+            <h2 id="tituloPrincipal" class="logoTitulo">
+                <img src="/Imagens/logo.png" alt="imagemLogo" class="logoLoja">
+            </h2>
 
-        <p class=destaques>
-            Encontre aqui a camisa do seu time do coração com o <strong> melhor preço! </strong>
-        </p>
+            <p class="destaques">
+                Encontre aqui a camisa do seu time do coração com o <strong>melhor preço!</strong>
+            </p>
 
+            <p hidden>Promoção para camisas do Flamengo!</p>
+        </div>
 
-        <input class="busca" type="text" name="procura" placeholder="o que você procura?" id="procura">
-        <button class="btnbuscar" title="Clique aqui para buscar" id="btnprocura"> Buscar </button>
+        <div class="lado-direito">
 
-        <p hidden> Promoção para camisas do Flamengo! </p>
+            <div class="links-menu">
+                <a href="sobre.html" id="sobre">Sobre nós</a>
+                <a href="contato.html" id="contato">Fale Conosco</a>
+                <a href="formulario.html" id="cadastro">Cadastre-se</a>
+            </div>
+
+            <div class="area-busca">
+                <input class="busca" type="text" name="procura" placeholder="o que você procura?" id="procura">
+                <button class="btnbuscar" title="Clique aqui para buscar" id="btnprocura">Buscar</button>
+            </div>
+
+        </div>
 
     </header>
 
-    <nav>
+    <nav class="menu">
 
-        <details>
+        <details class="categorias">
             <summary><strong>Categorias</strong></summary>
 
             <ul>
@@ -43,34 +58,37 @@
             </ul>
         </details>
 
-        <a href="formulario.html" id="cadastro"> Cadastre-se </a>
-        <a href="contato.html" id="contato">Fale Conosco</a> <br>
-        <a href="sobre.html" id="sobre">Sobre nós</a> <br>
-
     </nav>
 
     <main>
-        <section>
+
+        <section class="produtos">
 
             <article>
-                <p> <strong> Camisa do Flamengo 2026 </strong> </p>
-                <img src="/Imagens/CamisaFlamengo.png" alt="Camisa do Flamengo" width="300" height="400"> <br>
+                <p><strong>Camisa do Flamengo 2026</strong></p>
+
+                <img src="Imagens/CamisaFlamengo.png" alt="Camisa do Flamengo">
+
                 <button data-id="1" data-nome="flamengo12026" data-preco="399">
                     Comprar
-                </button> <br> <br>
+                </button>
             </article>
 
             <article>
-                <p> <strong> Bermuda Nike</strong></p>
-                <img src="/Imagens/nikedry.png" alt="Bermuda Nike " width="300" height="400"> <br>
+                <p><strong>Bermuda Nike</strong></p>
+
+                <img src="Imagens/nikedry.png" alt="Bermuda Nike">
+
                 <button data-id="2" data-nome="nikeb1" data-preco="229">
                     Comprar
-                </button> <br> <br>
+                </button>
             </article>
 
             <article>
-                <p> <strong> Tênis Adidas </strong></p>
-                <img src="/Imagens/tenisadidas.png" alt="Tênis Adidas" width="300" height="400"> <br>
+                <p><strong>Tênis Adidas</strong></p>
+
+                <img src="Imagens/tenisadidas.png" alt="Tênis Adidas">
+
                 <button data-id="3" data-nome="adidast1" data-preco="199">
                     Comprar
                 </button>
@@ -78,77 +96,13 @@
 
         </section>
 
-        <br><br>
-
-        <h3> Tabela </h3>
-
-        <table border="1">
-
-            <thead>
-                <tr>
-                    <th> Produto </th>
-                    <th> Marca/Ano </th>
-                    <th> Preços </th>
-                    <th> Frete </th>
-                </tr>
-
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>Camisa do Flamengo</td>
-                    <td> 2026 </td>
-                    <td> R$399,99 </td>
-                    <td> Grátis </td>
-                </tr>
-
-                <tr>
-                    <td> Bermuda</td>
-                    <td> Nike </td>
-                    <td> R$229,99</td>
-                    <td> Grátis </td>
-                </tr>
-
-                <tr>
-                    <td> Tênis </td>
-                    <td> Adidas</td>
-                    <td> R$149,99 </td>
-                    <td> Grátis </td>
-                </tr>
-
-                <tr>
-                    <td> Whey </td>
-                    <td> Growth </td>
-                    <td> R$99,99 </td>
-                    <td> Grátis </td>
-                </tr>
-
-                <tr>
-                    <td> Bola de Basquete </td>
-                    <td> NBA </td>
-                    <td> R$69,21</td>
-                    <td> Grátis </td>
-                </tr>
-
-            </tbody>
-
-            <tfoot>
-                <tr>
-                    <td colspan="4"> Produtos = 5 </td>
-                </tr>
-            </tfoot>
-
-        </table>
-
     </main>
 
-    <br><br><br>
-
-    <footer>
-        <p> Teste Footer </p>
+    <footer class="rodape">
+        <p> Noventa Minutos © </p>
+        <p> Roupas e artigos esportivos com qualidade e bom preço. </p>
     </footer>
 
 </body>
-
 
 </html>
