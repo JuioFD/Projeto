@@ -1,10 +1,21 @@
+/* body */
+
 body {
+     background-image: url("../Imagens/logos/fundodaPagina.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: #f4f1ea;
     color: #222222;
     margin: 0;
     min-height: 100vh;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
 }
+
+/* index */
 
 .topo {
     display: flex;
@@ -89,19 +100,19 @@ body {
 
 main {
     padding: 25px;
+    flex: 1;
 }
 
+/* produtos com grid */
+
 .produtos {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 300px));
     gap: 25px;
     justify-content: flex-start;
 }
 
 .produtos article {
-    flex: 0 0 300px;
-    max-width: 300px;
     background-color: #ffffff;
     border: 1px solid #d6d0c4;
     border-radius: 8px;
@@ -116,17 +127,7 @@ main {
     object-fit: contain;
 }
 
-table {
-    border-collapse: collapse;
-    background-color: #ffffff;
-    color: #222222;
-}
-
-th,
-td {
-    padding: 8px;
-    border: 1px solid #d6d0c4;
-}
+/* estilos gerais */
 
 footer {
     padding: 25px;
@@ -139,9 +140,7 @@ h3,
 p,
 li,
 summary,
-strong,
-th,
-td {
+strong {
     color: #222222;
 }
 
@@ -171,6 +170,8 @@ button {
 button:hover {
     background-color: #a30000;
 }
+
+/* sobre */
 
 .pagina-sobre {
     display: flex;
@@ -244,15 +245,174 @@ button:hover {
     text-decoration: none;
 }
 
+/* rodapé */
 
 .rodape {
     background-color: #8b0000;
     padding: 25px;
     text-align: center;
-    margin-top: 40px;
 }
 
 .rodape p {
     color: white;
     margin: 5px 0;
+}
+
+/* contato */
+
+.cabecalho {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 25px;
+}
+
+.pagina-contato {
+    padding: 40px 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.contato-card {
+    background-color: #ffffff;
+    border: 1px solid #d6d0c4;
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.textoContato {
+    margin-bottom: 20px;
+}
+
+.contatos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.contatos img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.contatos a {
+    display: inline-block;
+}
+
+.links-contato {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.links-contato a {
+    background-color: #8b0000;
+    color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 5px;
+}
+
+.links-contato a:hover {
+    background-color: #a30000;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* cadastro */
+
+.cabecalho-cadastro {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 25px;
+    gap: 20px;
+
+}
+
+.pagina-cadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 25px;
+}
+
+.pagina-cadastro form {
+    background-color: #ffffff;
+    border: 1px solid #d6d0c4;
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+.pagina-cadastro input,
+.pagina-cadastro select,
+.pagina-cadastro textarea {
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid #d6d0c4;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.pagina-cadastro input[type="submit"] {
+    background-color: #8b0000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.pagina-cadastro input[type="submit"]:hover {
+    background-color: #a30000;
+}
+
+.cadastroIcon {
+    width: 180px;
+    height: auto;
+    display: block;
+    margin: 30px auto 0 auto;
+}
+
+.links-cadastro {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+
+.links-cadastro a {
+    display: inline-block;
+    background-color: #8b0000;
+    color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 5px;
+}
+
+.links-cadastro a:hover {
+    background-color: #a30000;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.link-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.link-login p {
+    margin: 0;
 }
