@@ -4,106 +4,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>formulario</title>
+    <title>Cadastro</title>
     <link rel="stylesheet" href="CSS/teste.css">
 </head>
 
 <body>
-    
+
     <header class="cabecalho-cadastro">
         <h2 id="logoCadastro" class="logoTitulo">
-            <img src="/Imagens/logos/cadastrologo.png" alt="imagemCadastro" class="logoLoja">
+            <img src="Imagens/logos/cadastrologo.png" alt="Logo da página de cadastro" class="logoLoja">
         </h2>
 
-        <div class="links-sobre">
+        <div class="links-cadastro">
             <a href="index.html">Voltar à página inicial</a>
             <a href="contato.html">Contato</a>
-            <a href="sobre.html"> Sobre nós </a>
+            <a href="sobre.html">Sobre nós</a>
         </div>
-        
     </header>
-
 
     <main class="pagina-cadastro">
 
         <form class="cadastrar">
 
-            <h1> Preencha seus dados para criar sua conta </h1>
-            <h2 id="cadastroIcon" id="cadastroIcon">
-                <img src="Imagens/icons/cadastroicon.png" alt="cadastro" class="cadastroIcon">
+            <h1>Preencha seus dados para criar sua conta</h1>
+
+            <h2 id="cadastroIcon">
+                <img src="Imagens/icons/cadastroicon.png" alt="Cadastro" class="cadastroIcon">
             </h2>
 
-
-            <label for="clienteNome">Nome:</label> <br>
-            <input type="text" id="clienteNome" name="cadName" placeholder="nome completo" required
-                oninvalid="this.setCustomValidity('Insira um nome válido')" oninput="this.setCustomValidity('')">
+            <label for="cadNome">Nome:</label> <br>
+            <input type="text" id="cadNome" name="cadNome" placeholder="nome completo" required
+                oninvalid="this.setCustomValidity('Insira um nome válido')"
+                oninput="this.setCustomValidity('')">
             <br><br>
 
-            <label for="emailCliente">E-mail:</label> <br>
-            <input type="email" id="emailCliente" name="cadEmail" placeholder="exemplo@dominio.com" required
-                oninvalid="this.setCustomValidity('Insira um e-mail válido')" oninput="this.setCustomValidity('')">
+            <label for="cadEmail">E-mail:</label> <br>
+            <input type="email" id="cadEmail" name="cadEmail" placeholder="exemplo@dominio.com" required
+                oninvalid="this.setCustomValidity('Insira um e-mail válido')"
+                oninput="this.setCustomValidity('')">
             <br><br>
 
-            <label>Senha:</label> <br>
-            <input type="password" name="cadSenha" placeholder="mínimo 8 caracteres" required minlength="8"
+            <label for="cadSenha">Senha:</label> <br>
+            <input type="password" id="cadSenha" name="cadSenha" placeholder="mínimo 8 caracteres" required minlength="8"
                 oninvalid="this.setCustomValidity('Sua senha precisa ter pelo menos 8 caracteres')"
                 oninput="this.setCustomValidity('')">
             <br><br>
 
-            <label> Data de Nascimento: </label><br>
-            <input type="date" name="cadNas" id="nascimento" required
+            <label for="cadData">Data de Nascimento:</label> <br>
+            <input type="date" id="cadData" name="cadData" required
                 oninvalid="this.setCustomValidity('Insira sua data de nascimento')"
                 oninput="this.setCustomValidity('')">
             <br><br>
 
-            <label> CEP: </label> <br>
-            <input type="text" name="cepCad" id="cep" placeholder="xxxxx-xxx" maxlength="9" pattern="[0-9]{5}-[0-9]{3}"
-                required oninvalid="this.setCustomValidity('Insira seu CEP corretamente')"
+            <label for="cadCEP">CEP:</label> <br>
+            <input type="text" id="cadCEP" name="cadCEP" placeholder="xxxxx-xxx" maxlength="9"
+                pattern="[0-9]{5}-[0-9]{3}" required
+                oninvalid="this.setCustomValidity('Insira seu CEP corretamente')"
                 oninput="this.setCustomValidity('')">
             <br><br>
 
-            <label for="telefone">Número de Telefone:</label><br>
-            <input type="tel" name="cadTel" id="telefone" placeholder="00 00000-0000" required 
-                pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" maxlength="13"
+            <label for="cadTelefone">Número de Telefone:</label> <br>
+            <input type="tel" id="cadTelefone" name="cadTelefone" placeholder="00 00000-0000" maxlength="13"
+                pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" required
                 oninvalid="this.setCustomValidity('Insira seu número de telefone no formato 00 00000-0000')"
                 oninput="this.setCustomValidity('')">
             <br><br>
 
-            <label> Gênero: </label><br>
+            <label>Gênero:</label> <br>
             <input type="radio" name="sexo" value="Feminino" required> Feminino
             <input type="radio" name="sexo" value="Masculino" required> Masculino
             <br><br>
 
-            <label>Como conheceu nosso site? (opcional) </label><br>
+            <label for="ref">Como conheceu nosso site? (opcional)</label> <br>
             <select name="referencia" id="ref">
                 <option>Selecione:</option>
                 <option>Anúncio</option>
                 <option>Amigos</option>
                 <option>Indicação</option>
             </select>
-
             <br><br>
 
-            <label> O que você procura em nosso site? (opcional) </label> <br>
-            <input type="checkbox" name="preferencias"> Adidas <br>
-            <input type="checkbox" name="preferencias"> Basquete <br>
-            <input type="checkbox" name="preferencias"> Bermudas <br>
-            <input type="checkbox" name="preferencias"> Calçados <br>
-            <input type="checkbox" name="preferencias"> Camisas <br>
-            <input type="checkbox" name="preferencias"> Futebol <br>
-            <input type="checkbox" name="preferencias"> Nike <br>
-            <input type="checkbox" name="preferencias"> Suplementos <br>
-
+            <label>O que você procura em nosso site? (opcional)</label> <br>
+            <input type="checkbox" name="preferencias" value="Adidas"> Adidas <br>
+            <input type="checkbox" name="preferencias" value="Basquete"> Basquete <br>
+            <input type="checkbox" name="preferencias" value="Bermudas"> Bermudas <br>
+            <input type="checkbox" name="preferencias" value="Calçados"> Calçados <br>
+            <input type="checkbox" name="preferencias" value="Camisas"> Camisas <br>
+            <input type="checkbox" name="preferencias" value="Futebol"> Futebol <br>
+            <input type="checkbox" name="preferencias" value="Nike"> Nike <br>
+            <input type="checkbox" name="preferencias" value="Suplementos"> Suplementos <br>
             <br><br>
 
-            <label> Feedbacks: (opcional) </label> <br> <br>
-            <textarea name="msg" id="Feedbacks" rows="6" cols="50"></textarea>
-
+            <label for="feedbacks">Feedbacks: (opcional)</label> <br><br>
+            <textarea name="feedbacks" id="feedbacks" rows="6" cols="50"></textarea>
             <br><br>
 
             <div class="link-login">
-                <p> Ja tem uma conta? <a href="login.html"> Entrar </a></p>
-                <input type="submit" value="Enviar">
+                <p>Já tem uma conta? <a href="login.html">Entrar</a></p>
+                <input type="submit" value="Cadastrar">
             </div>
 
         </form>
@@ -111,8 +109,8 @@
     </main>
 
     <footer class="rodape">
-        <p> Noventa Minutos © </p>
-        <p> Roupas e artigos esportivos com qualidade e bom preço. </p>
+        <p>Noventa Minutos ©</p>
+        <p>Roupas e artigos esportivos com qualidade e bom preço.</p>
     </footer>
 
 </body>

@@ -14,22 +14,30 @@
 
         <div class="texto-topo">
             <h2 id="tituloPrincipal" class="logoTitulo">
-                <img src="/Imagens/logos/logo.png" alt="imagemLogo" class="logoLoja">
+                <img src="Imagens/logos/logo.png" alt="Logo da Noventa Minutos" class="logoLoja">
             </h2>
-
-            <p class="destaques">
-                Encontre aqui a camisa do seu time do coração com o <strong>melhor preço!</strong>
-            </p>
 
             <p hidden>Promoção para camisas do Flamengo!</p>
         </div>
+
+        <nav class="menu-categorias">
+            <a href="Categoria/camisas.html">Camisas</a>
+            <a href="Categoria/bermudas.html">Bermudas</a>
+            <a href="Categoria/calcados.html">Calçados</a>
+            <a href="Categoria/futebol.html">Futebol</a>
+            <a href="Categoria/basquete.html">Basquete</a>
+            <a href="Categoria/nike.html">Nike</a>
+            <a href="Categoria/adidas.html">Adidas</a>
+            <a href="Categoria/suplementos.html">Suplementos</a>
+        </nav>
 
         <div class="lado-direito">
 
             <div class="links-menu">
                 <a href="sobre.html" id="sobre">Sobre nós</a>
-                <a href="contato.html" id="contato"> Contato </a>
+                <a href="contato.html" id="contato">Contato</a>
                 <a href="cadastro.html" id="cadastro">Cadastre-se</a>
+                <a href="login.html">Login</a>
             </div>
 
             <div class="area-busca">
@@ -41,59 +49,56 @@
 
     </header>
 
-    <nav class="menu">
-
-        <details class="categorias">
-            <summary><strong>Categorias</strong></summary>
-
-            <ul>
-                <li><a href="Categoria/camisas.html">Camisas</a></li>
-                <li><a href="Categoria/bermudas.html">Bermudas</a></li>
-                <li><a href="Categoria/calcados.html">Calçados</a></li>
-                <li><a href="Categoria/futebol.html">Futebol</a></li>
-                <li><a href="Categoria/basquete.html">Basquete</a></li>
-                <li><a href="Categoria/nike.html">Nike</a></li>
-                <li><a href="Categoria/adidas.html">Adidas</a></li>
-                <li><a href="Categoria/suplementos.html">Suplementos</a></li>
-            </ul>
-        </details>
-
-    </nav>
-
     <main>
 
-    <h1>Produtos em Destaque:</h1>
+        <h1>Produtos em Destaque:</h1>
 
         <section class="produtos">
 
-            <article>
-                <p><strong>Camisa do Flamengo 2026</strong></p>
-
-                <img src="Imagens/produtos/CamisaFlamengo.png" alt="Camisa do Flamengo">
-
-                <button data-id="1" data-nome="flamengo12026" data-preco="399">
+            <article class="card-produto">
+                <h3>Camisa Flamengo 2026</h3>
+                <img src="Imagens/produtos/camisaflamengo12026.png" alt="Camisa Flamengo Rubro-Negra 2026">
+                <p class="preco">R$ 399,99</p>
+                <button data-id="1" data-nome="camisa-flamengo-rubro-negra-2026" data-preco="399">
                     Comprar
                 </button>
             </article>
 
-            <article>
-                <p><strong>Bermuda Nike</strong></p>
-
-                <img src="Imagens/produtos/nikedry.png" alt="Bermuda Nike">
-
-                <button data-id="2" data-nome="nikeb1" data-preco="229">
+            <article class="card-produto">
+                <h3>Bermuda Nike Dry Fit Preta</h3>
+                <img src="Imagens/produtos/nikedry.png" alt="Bermuda Nike Dry Fit Preta">
+                <p class="preco">R$ 299,99</p>
+                <button data-id="2" data-nome="bermuda-nike-dry-fit-preta" data-preco="299">
                     Comprar
                 </button>
             </article>
 
-            <article>
-                <p><strong>Tênis Adidas</strong></p>
-
-                <img src="Imagens/produtos/tenisadidas.png" alt="Tênis Adidas">
-
-                <button data-id="3" data-nome="adidast1" data-preco="199">
+            <article class="card-produto">
+                <h3>Tênis Adidas Running Branco</h3>
+                <img src="Imagens/produtos/tenisadidas.png" alt="Tênis Adidas Running Branco">
+                <p class="preco">R$ 199,99</p>
+                <button data-id="3" data-nome="tenis-adidas-running-branco" data-preco="199">
                     Comprar
                 </button>
+            </article>
+
+            <article class="card-produto">
+                <h3>Bola de Basquete NBA</h3>
+                <img src="Imagens/produtos/bolabasquetenba1.png" alt="Bola de Basquete NBA">
+                <p class="preco">R$159,99</p>
+                <button data-id="4" data-nome="bola-de-basquete-NBA1" data-preco="149">
+                    Comprar
+                </button>
+            </article>
+
+            <article class="card-produto">
+                <h3>Suplemento Whey Protein 1kg</h3>
+                <img src="Imagens/produtos/wheyproteinmorango.png" alt="Suplemento Whey Protein 1kg">
+                <p class="preco">R$ 249,99</p>
+                <button data-id="5" data-nome="suplemento-whey-protein-1kg" data-preco="249">
+                    Comprar
+                </button>
+
             </article>
 
         </section>
@@ -103,6 +108,7 @@
     <footer class="rodape">
         <p> Noventa Minutos © </p>
         <p> Roupas e artigos esportivos com qualidade e bom preço. </p>
+
     </footer>
 
 </body>

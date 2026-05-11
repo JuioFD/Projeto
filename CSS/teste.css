@@ -1,7 +1,8 @@
-/* body */
+/* body */ 
+/* colocando comentarios apenas para me localizar quando for alterar algo */
 
 body {
-     background-image: url("../Imagens/logos/fundodaPagina.png");
+    background-image: url("../Imagens/logos/fundodaPagina.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -11,6 +12,7 @@ body {
     margin: 0;
     min-height: 100vh;
     font-family: Arial, sans-serif;
+
     display: flex;
     flex-direction: column;
 }
@@ -19,12 +21,11 @@ body {
 
 .topo {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 25px;
+    gap: 25px;
+    padding: 25px 45px 20px 25px;
 }
 
 .texto-topo {
@@ -40,6 +41,7 @@ body {
 .logoTitulo {
     margin: 0;
     padding: 0;
+    line-height: 0;
 }
 
 .logoLoja {
@@ -49,15 +51,38 @@ body {
 }
 
 .destaques {
-    margin: 0;
+    margin: 8px 0 0 0;
+    font-size: 17px;
+}
+
+.menu-categorias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+    padding-top: 18px;
+    flex: 1;
+}
+
+.menu-categorias a {
+    color: #111111;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.menu-categorias a:hover {
+    color: #8b0000;
+    text-decoration: underline;
 }
 
 .lado-direito {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 20px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    margin-right: 0;
 }
 
 .links-menu {
@@ -65,7 +90,6 @@ body {
     flex-direction: row;
     gap: 15px;
     align-items: center;
-    padding-top: 10px;
     flex-wrap: wrap;
 }
 
@@ -78,24 +102,16 @@ body {
 
 #procura {
     width: 280px;
-    padding: 10px;
+    padding: 11px;
     box-sizing: border-box;
+    border-radius: 5px;
 }
 
 .btnbuscar {
-    padding: 8px 14px;
+    padding: 9px 16px;
     cursor: pointer;
-}
-
-.menu {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0 25px 25px 25px;
-}
-
-.categorias {
-    flex: 1 1 200px;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 main {
@@ -103,35 +119,69 @@ main {
     flex: 1;
 }
 
-/* produtos pagina principal */
+/* produtos  */
 
 .produtos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 300px));
-    gap: 25px;
-    justify-content: flex-start;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-.produtos article {
-    background-color: #ffffff;
-    border: 1px solid #d6d0c4;
-    border-radius: 8px;
-    padding: 15px;
+.card-produto {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 22px;
     box-sizing: border-box;
     text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.produtos article img {
+.card-produto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.card-produto h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 18px;
+    color: #222222;
+}
+
+.card-produto img {
     width: 100%;
     height: 300px;
     object-fit: contain;
+    background-color: #f7f7f7;
+    border-radius: 12px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-/* estilos gerais */
+.preco {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+    margin: 18px 0 14px 0;
+}
 
-footer {
-    padding: 25px;
-    text-align: center;
+.card-produto button {
+    background-color: #8b0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.card-produto button:hover {
+    background-color: #a30000;
 }
 
 h1,
@@ -171,7 +221,14 @@ button:hover {
     background-color: #a30000;
 }
 
-/* sobre */
+/* pagina sobre */
+
+.cabecalho {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 25px;
+}
 
 .pagina-sobre {
     display: flex;
@@ -245,7 +302,7 @@ button:hover {
     text-decoration: none;
 }
 
-/* rodapé */
+/* rodapé das paginas */
 
 .rodape {
     background-color: #8b0000;
@@ -258,14 +315,7 @@ button:hover {
     margin: 5px 0;
 }
 
-/* contato */
-
-.cabecalho {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 25px;
-}
+/* paginas contato */
 
 .pagina-contato {
     padding: 40px 25px;
@@ -327,7 +377,7 @@ button:hover {
     text-decoration: none;
 }
 
-/* cadastro */
+/*  pagina de cadastro */
 
 .cabecalho-cadastro {
     display: flex;
@@ -336,7 +386,6 @@ button:hover {
     flex-wrap: wrap;
     padding: 25px;
     gap: 20px;
-
 }
 
 .pagina-cadastro {
@@ -356,14 +405,24 @@ button:hover {
     box-sizing: border-box;
 }
 
-.pagina-cadastro input,
+.pagina-cadastro input[type="text"],
+.pagina-cadastro input[type="email"],
+.pagina-cadastro input[type="password"],
+.pagina-cadastro input[type="date"],
+.pagina-cadastro input[type="tel"],
 .pagina-cadastro select,
 .pagina-cadastro textarea {
+    width: 100%;
     margin-top: 5px;
     padding: 8px;
     border: 1px solid #d6d0c4;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+.pagina-cadastro input[type="radio"],
+.pagina-cadastro input[type="checkbox"] {
+    margin-top: 5px;
 }
 
 .pagina-cadastro input[type="submit"] {
@@ -372,6 +431,7 @@ button:hover {
     border: none;
     padding: 10px 15px;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 .pagina-cadastro input[type="submit"]:hover {
@@ -410,9 +470,12 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
     margin-top: 25px;
 }
 
 .link-login p {
     margin: 0;
 }
+
+/* pagina de login */

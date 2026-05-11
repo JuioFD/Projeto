@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="CSS/teste.css">
+</head>
+
+<body>
+    <main class="pagina-login">
+        
+        <div class="cabecalho-login">
+            <h1>Login</h1>
+        </div>
+
+        <form id="login">
+            <label for="logEmail"> E-mail:</label> <br>
+            <input type="email" id="logEmail" name="logEmail" placeholder="exemplo@dominio.com" required
+                oninvalid="this.setCustomValidity('Insira um e-mail válido')" 
+                oninput="this.setCustomValidity('')">
+            <br><br>
+
+            <label for="logSenha">Senha:</label> <br>
+            <input type="password" name="logSenha" placeholder="mínimo 8 caracteres" required minlength="8"
+                oninvalid="this.setCustomValidity('Sua senha precisa ter pelo menos 8 caracteres')"
+                oninput="this.setCustomValidity('')">
+            <br><br>
+
+            <input type="submit" value="Entrar">
+
+            <div class="opcoesLogin">
+                <label>
+                    <input type="checkbox">
+                    Lembrar senha
+                </label>
+                <a href="#"> Esqueci minha senha</a>
+            </div>
+
+
+            <div class="register-link">
+            <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+            </div>
+        </form>
+    </main>
+
+    <section>
+        <div class="links-sobre">
+                <a href="index.html">Voltar à página inicial</a>
+                <a href="contato.html">Contato</a>
+                <a href="cadastro.html">Cadastre-se</a>
+                <a href="sobre.html"> Sobre nós</a>
+            </div>
+    </section>
+
+
+</body>
+
+</html>
