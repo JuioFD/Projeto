@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Noventa Minutos</title>
+    <title>noventa minutos</title>
     <link rel="stylesheet" href="CSS/teste.css">
 </head>
 
@@ -14,10 +14,8 @@
 
         <div class="texto-topo">
             <h2 id="tituloPrincipal" class="logoTitulo">
-                <img src="Imagens/logos/logo.png" alt="Logo da Noventa Minutos" class="logoLoja">
+                <img src="Imagens/logos/logo.png" alt="logo da noventa minutos" class="logoLoja">
             </h2>
-
-            <p hidden>Promoção para camisas do Flamengo!</p>
         </div>
 
         <nav class="menu-categorias">
@@ -34,15 +32,17 @@
         <div class="lado-direito">
 
             <div class="links-menu">
-                <a href="sobre.html" id="sobre">Sobre nós</a>
-                <a href="contato.html" id="contato">Contato</a>
-                <a href="cadastro.html" id="cadastro">Cadastre-se</a>
-                <a href="login.html">Login</a>
+                <a href="sobre.html" id="sobre">sobre nós</a>
+                <a href="contato.html" id="contato">contato</a>
+                <a href="cadastro.html" id="cadastro">cadastre-se</a>
+                <a href="login.html">login</a>
             </div>
 
             <div class="area-busca">
-                <input class="busca" type="text" name="procura" placeholder="o que você procura?" id="procura">
-                <button class="btnbuscar" title="Clique aqui para buscar" id="btnprocura">Buscar</button>
+                <div class="campo-busca">
+                    <img src="Imagens/icons/lupaicon.jpg" alt="ícone de busca">
+                    <input class="busca" type="text" name="procura" placeholder="o que você procura?" id="procura">
+                </div>
             </div>
 
         </div>
@@ -51,66 +51,212 @@
 
     <main>
 
-        <h1>Produtos em Destaque:</h1>
+        <section class="banner-home">
+            <img src="Imagens/logos/bannerindex.png" alt="banner da noventa minutos">
+        </section>
 
-        <section class="produtos">
+        <section class="hero">
 
-            <article class="card-produto">
-                <h3>Camisa Flamengo 2026</h3>
-                <img src="Imagens/produtos/camisaflamengo12026.png" alt="Camisa Flamengo Rubro-Negra 2026">
-                <p class="preco">R$ 399,99</p>
-                <button data-id="1" data-nome="camisa-flamengo-rubro-negra-2026" data-preco="399">
-                    Comprar
-                </button>
-            </article>
+            <div class="hero-texto">
+                <h1>Vista a paixão pelo esporte em cada minuto</h1>
 
-            <article class="card-produto">
-                <h3>Bermuda Nike Dry Fit Preta</h3>
-                <img src="Imagens/produtos/nikedry.png" alt="Bermuda Nike Dry Fit Preta">
-                <p class="preco">R$ 299,99</p>
-                <button data-id="2" data-nome="bermuda-nike-dry-fit-preta" data-preco="299">
-                    Comprar
-                </button>
-            </article>
+                <p>
+                    A noventa minutos é uma loja de roupas e artigos esportivos feita para quem vive futebol,
+                    basquete e outros esportes dentro e fora das quadras.
+                </p>
 
-            <article class="card-produto">
-                <h3>Tênis Adidas Running Branco</h3>
-                <img src="Imagens/produtos/tenisadidas.png" alt="Tênis Adidas Running Branco">
-                <p class="preco">R$ 199,99</p>
-                <button data-id="3" data-nome="tenis-adidas-running-branco" data-preco="199">
-                    Comprar
-                </button>
-            </article>
+                <a href="cadastro.html" class="btn-cta">criar minha conta</a>
+            </div>
 
-            <article class="card-produto">
-                <h3>Bola de Basquete NBA</h3>
-                <img src="Imagens/produtos/bolabasquetenba1.png" alt="Bola de Basquete NBA">
-                <p class="preco">R$159,99</p>
-                <button data-id="4" data-nome="bola-de-basquete-NBA1" data-preco="149">
-                    Comprar
-                </button>
-            </article>
-
-            <article class="card-produto">
-                <h3>Suplemento Whey Protein 1kg</h3>
-                <img src="Imagens/produtos/wheyproteinmorango.png" alt="Suplemento Whey Protein 1kg">
-                <p class="preco">R$ 249,99</p>
-                <button data-id="5" data-nome="suplemento-whey-protein-1kg" data-preco="249">
-                    Comprar
-                </button>
-
-            </article>
+            <div class="hero-imagem">
+                <img src="Imagens/logos/logo.png" alt="logo da loja noventa minutos">
+            </div>
 
         </section>
 
+        <section class="produtos-destaque">
+
+            <h2>Produtos em Destaque</h2>
+            <h3>Copa do Mundo 2026</h3>
+
+            <div class="produtos">
+
+                <article class="card-produto">
+                    <h3>Camisa Seleção Brasileira 2026</h3>
+                    <img src="Imagens/produtos/CamisaSelecao1.png" alt="camisa seleção brasileira 2026">
+                    <p class="preco">R$ 399,99</p>
+                    <button data-id="1" data-nome="camisa-selecao-brasileira-2026" data-preco="399">
+                        Comprar
+                    </button>
+                </article>
+
+                <article class="card-produto">
+                    <h3>Camisa Seleção Francesa 2026</h3>
+                    <img src="Imagens/produtos/CamisaSelecao2.png" alt="camisa seleção francesa 2026">
+                    <p class="preco">R$ 349,99</p>
+                    <button data-id="2" data-nome="camisa-selecao-francesa-2026" data-preco="349">
+                        Comprar
+                    </button>
+                </article>
+
+                <article class="card-produto">
+                    <h3>Camisa Seleção Espanhola 2026</h3>
+                    <img src="Imagens/produtos/CamisaSelecao3.png" alt="camisa seleção espanhola 2026">
+                    <p class="preco">R$ 349,99</p>
+                    <button data-id="3" data-nome="camisa-selecao-espanhola-2026" data-preco="349">
+                        Comprar
+                    </button>
+                </article>
+
+                <article class="card-produto">
+                    <h3>Camisa Seleção Argentina 2026</h3>
+                    <img src="Imagens/produtos/CamisaSelecao4.png" alt="camisa seleção argentina 2026">
+                    <p class="preco">R$ 349,99</p>
+                    <button data-id="4" data-nome="camisa-selecao-argentina-2026" data-preco="349">
+                        Comprar
+                    </button>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="depoimentos">
+
+            <h2>Quem compra, recomenda!</h2>
+
+            <div class="depoimentos-grid">
+
+                <article class="depoimento-card">
+                    <p>
+                        "Comprei uma camisa da seleção brasileira e gostei bastante da qualidade do produto.
+                        o tecido é confortável, a estampa veio bem feita e o tamanho ficou certinho.
+                        também achei o site fácil de entender, principalmente porque os produtos estão separados por
+                        categoria."
+                    </p>
+                    <strong>Gabriel Barbosa</strong>
+                </article>
+
+                <article class="depoimento-card">
+                    <p>
+                        "Estava procurando uma loja com produtos esportivos variados e acabei conhecendo a noventa
+                        minutos.
+                        gostei da organização da página, das opções de camisas e da forma como as informações aparecem.
+                        passa uma sensação de loja simples, mas bem cuidada."
+                    </p>
+                    <strong>Emma Catherine</strong>
+                </article>
+
+                <article class="depoimento-card">
+                    <p>
+                        "Achei a proposta da loja muito boa, principalmente para quem gosta de futebol e basquete.
+                        os cards dos produtos ajudam bastante na visualização e deixam a compra mais prática.
+                        compraria novamente e também indicaria para amigos que curtem artigos esportivos."
+                    </p>
+                    <strong>Isabella Santos </strong>
+                </article>
+
+            </div>
+
+            <section class="beneficios">
+
+                <h2>Por que comprar na noventa minutos?</h2>
+
+                <div class="beneficios-grid">
+
+                    <article class="beneficio-card">
+                        <img src="Imagens/icons/setaIcon.png" alt="ícone de produto">
+                        <h3>Produtos Selecionados</h3>
+                        <p>
+                            Trabalhamos com artigos esportivos pensados para quem busca estilo, conforto e qualidade.
+                        </p>
+                    </article>
+
+                    <article class="beneficio-card">
+                        <img src="Imagens/icons/wppicon.png" alt="ícone de atendimento">
+                        <h3>Atendimento Rápido!</h3>
+                        <p>
+                            Entre em contato com a loja pelas redes sociais e tire suas dúvidas antes da compra.
+                        </p>
+                    </article>
+
+                    <article class="beneficio-card">
+                        <img src="Imagens/icons/novidadeIcon.png" alt="ícone de novidades">
+                        <h3>Novidades Esportivas</h3>
+                        <p>
+                            Acompanhe lançamentos, camisas, calçados e acessórios inspirados no mundo do esporte.
+                        </p>
+                    </article>
+
+                </div>
+
+            </section>
+
+            <section class="formulario-home">
+
+                <h2>Receba novidades</h2>
+
+                <p>
+                    Cadastre seu e-mail para acompanhar lançamentos, promoções e novos produtos da loja!!
+                </p>
+
+                <form>
+                    <label for="nomeHome">Nome:</label>
+                    <input type="text" id="nomeHome" name="nomeHome" placeholder="seu nome" required>
+                    <label for="emailHome">E-mail:</label>
+                    <input type="email" id="emailHome" name="emailHome" placeholder="exemplo@dominio.com" required>
+                    <label for="interesseHome">Produto de interesse:</label>
+                    <select id="interesseHome" name="interesseHome">
+                        <option value="">Selecione uma opção</option>
+                        <option value="bermudas">bermudas</option>
+                        <option value="camisas">camisas</option>
+                        <option value="calcados">calçados</option>
+                        <option value="futebol">futebol</option>
+                        <option value="basquete">basquete</option>
+                        <option value="suplementos">suplementos</option>
+                    </select>
+                    <input type="submit" value="cadastrar">
+                </form>
+            </section>
     </main>
 
+    <section class="sobre-home">
+
+        <div class="sobre-home-texto">
+            <h2>Sobre a loja</h2>
+
+            <p>
+                A Noventa Minutos nasceu com o objetivo de oferecer produtos esportivos com qualidade,
+                bom preço e visual moderno. nossa loja busca atender torcedores, atletas amadores e pessoas
+                que gostam de usar o esporte também como parte do seu estilo.
+            </p>
+
+            <p>
+                Aqui você encontra camisas, bermudas, calçados, acessórios e produtos relacionados a futebol,
+                basquete e outras categorias esportivas.
+            </p>
+        </div>
+
+    </section>
+
     <footer class="rodape">
-        <p> Noventa Minutos © </p>
-        <p> Roupas e artigos esportivos com qualidade e bom preço. </p>
 
+        <div class="redes-rodape">
+            <a href="https://www.instagram.com/juliodossi_" target="_blank">
+                <img src="Imagens/icons/instaicon.png" alt="instagram">
+            </a>
+            <a href="https://wa.me/5527996681009" target="_blank">
+                <img src="Imagens/icons/wppicon.png" alt="whatsapp">
+            </a>
+            <a href="https://x.com/juio_fd" target="_blank">
+                <img src="Imagens/icons/xicon.png" alt="twitter">
+            </a>
+        </div>
+        <div class="texto-rodape">
+            <p>Noventa Minutos - Todos os Direitos Reservados ©</p>
+            <p>Roupas e artigos esportivos com qualidade e bom preço.</p>
+        </div>
     </footer>
-
 </body>
 
 </html>

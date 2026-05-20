@@ -9,17 +9,16 @@
 </head>
 
 <body>
-    <main class="pagina-login">
-        
-        <div class="cabecalho-login">
+    <main class="pagina-cadastro">
+
+        <div class="cabecalho-cadastro">
             <h1>Login</h1>
         </div>
 
-        <form id="login">
+        <form id="cadastro">
             <label for="logEmail"> E-mail:</label> <br>
             <input type="email" id="logEmail" name="logEmail" placeholder="exemplo@dominio.com" required
-                oninvalid="this.setCustomValidity('Insira um e-mail válido')" 
-                oninput="this.setCustomValidity('')">
+                oninvalid="this.setCustomValidity('Insira um e-mail válido')" oninput="this.setCustomValidity('')">
             <br><br>
 
             <label for="logSenha">Senha:</label> <br>
@@ -28,7 +27,7 @@
                 oninput="this.setCustomValidity('')">
             <br><br>
 
-            <input type="submit" value="Entrar">
+            <input type="submit" value="Entrar"> <br><br>
 
             <div class="opcoesLogin">
                 <label>
@@ -40,21 +39,39 @@
 
 
             <div class="register-link">
-            <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+                <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
             </div>
         </form>
     </main>
 
     <section>
         <div class="links-sobre">
-                <a href="index.html">Voltar à página inicial</a>
-                <a href="contato.html">Contato</a>
-                <a href="cadastro.html">Cadastre-se</a>
-                <a href="sobre.html"> Sobre nós</a>
-            </div>
+            <a href="index.html">Voltar à página inicial</a>
+            <a href="contato.html">Contato</a>
+            <a href="cadastro.html">Cadastre-se</a>
+            <a href="sobre.html"> Sobre nós</a>
+        </div>
     </section>
 
 
+    <footer class="rodape">
+
+        <div class="redes-rodape">
+            <a href="https://www.instagram.com/juliodossi_" target="_blank">
+                <img src="Imagens/icons/instaicon.png" alt="instagram">
+            </a>
+            <a href="https://wa.me/5527996681009" target="_blank">
+                <img src="Imagens/icons/wppicon.png" alt="whatsapp">
+            </a>
+            <a href="https://x.com/juio_fd" target="_blank">
+                <img src="Imagens/icons/xicon.png" alt="x">
+            </a>
+        </div>
+        <div class="texto-rodape">
+            <p>Noventa Minutos - Todos os Direitos Reservados ©</p>
+            <p>Roupas e artigos esportivos com qualidade e bom preço.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
