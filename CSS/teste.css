@@ -1,6 +1,4 @@
-/* inserindo comentarios para me localizar caso for alterar algo em alguma das paginas */
 /* geral */
-
 
 :root {
     --vermelho: #8b0000;
@@ -9,7 +7,13 @@
     --branco: #ffffff;
     --borda: #d6d0c4;
     --card: rgba(255, 255, 255, 0.95);
+    --fundo-claro: #f7f7f7;
     --raio: 16px;
+    --sombra: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -17,12 +21,12 @@ body {
     min-height: 100vh;
     font-family: Arial, sans-serif;
     color: var(--texto);
+    background-color: #f4f1ea;
     background-image: url("../Imagens/logos/fundodaPagina.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: #f4f1ea;
     display: flex;
     flex-direction: column;
 }
@@ -32,13 +36,9 @@ main {
     padding: 25px;
 }
 
-h1,
-h2,
-h3,
-p,
-label,
-strong {
-    color: var(--texto);
+img {
+    max-width: 100%;
+    display: block;
 }
 
 a {
@@ -50,26 +50,6 @@ a {
 a:hover {
     color: var(--vermelho-hover);
     text-decoration: underline;
-}
-
-img {
-    max-width: 100%;
-}
-
-input,
-select,
-textarea {
-    border: 1px solid var(--borda);
-    border-radius: 5px;
-    padding: 9px;
-    box-sizing: border-box;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-    outline: 2px solid var(--vermelho);
-    border-color: var(--vermelho);
 }
 
 button,
@@ -98,25 +78,44 @@ input[type="submit"]:hover,
     text-decoration: none;
 }
 
-/* index */
-
-.banner-home {
-    margin-bottom: 55px;
-}
-
-.banner-home img {
+input,
+select,
+textarea {
     width: 100%;
-    display: block;
-    border-radius: var(--raio);
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    padding: 10px;
+    font: inherit;
 }
 
-.topo {
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--vermelho);
+    border-color: var(--vermelho);
+}
+
+
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+    border-color: var(--);
+}
+
+/* cabeçalho */
+
+.topo,
+.cabecalho,
+.cabecalho-cadastro {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: 25px;
     flex-wrap: wrap;
     padding: 25px;
+}
+
+.topo,
+.cabecalho-cadastro {
+    justify-content: space-between;
 }
 
 .logoTitulo {
@@ -126,21 +125,25 @@ input[type="submit"]:hover,
 
 .logoLoja {
     width: 220px;
-    display: block;
 }
 
 .menu-categorias,
-.links-menu {
+.links-menu,
+.links-sobre,
+.links-contato,
+.links-cadastro,
+.contatos,
+.link-login,
+.opcoesLogin {
     display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .menu-categorias {
     justify-content: center;
     flex: 1;
-    padding-top: 18px;
 }
 
 .menu-categorias a {
@@ -156,6 +159,7 @@ input[type="submit"]:hover,
     position: absolute;
     left: 0;
     bottom: -5px;
+    transition: 0.3s;
 }
 
 .menu-categorias a:hover::after {
@@ -178,9 +182,8 @@ input[type="submit"]:hover,
     gap: 8px;
     background-color: var(--branco);
     border: 1px solid var(--borda);
-    border-radius: 5px;
+    border-radius: 6px;
     padding: 9px;
-    box-sizing: border-box;
 }
 
 .campo-busca img {
@@ -189,14 +192,40 @@ input[type="submit"]:hover,
 }
 
 #procura {
-    width: 100%;
     border: none;
     padding: 0;
-    background-color: transparent;
+    background: transparent;
 }
 
 #procura:focus {
     outline: none;
+}
+
+/* index */
+
+.banner-home {
+    margin-bottom: 55px;
+}
+
+.banner-home img {
+    width: 100%;
+    border-radius: var(--raio);
+}
+
+.hero,
+.beneficios,
+.sobre-home,
+.produtos-destaque,
+.depoimentos,
+.sobre-card,
+.contato-card,
+.pagina-cadastro form,
+.formulario-home form {
+    background-color: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    padding: 30px;
+    box-shadow: var(--sombra);
 }
 
 .hero,
@@ -204,16 +233,7 @@ input[type="submit"]:hover,
 .sobre-home,
 .produtos-destaque,
 .depoimentos {
-    background-color: var(--card);
-    border: 1px solid var(--borda);
-    border-radius: var(--raio);
-    padding: 30px;
-    box-sizing: border-box;
     margin-bottom: 55px;
-}
-
-.beneficios {
-    margin-top: 45px;
 }
 
 .hero {
@@ -224,8 +244,8 @@ input[type="submit"]:hover,
 }
 
 .hero h1 {
-    font-size: 42px;
     margin-top: 0;
+    font-size: 42px;
 }
 
 .hero p,
@@ -236,7 +256,6 @@ input[type="submit"]:hover,
 
 .hero-imagem img {
     max-width: 360px;
-    display: block;
     margin: auto;
 }
 
@@ -244,21 +263,23 @@ input[type="submit"]:hover,
 .depoimentos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 25px;
     margin-top: 25px;
 }
 
 .beneficio-card,
-.depoimento-card {
+.depoimento-card,
+.card-produto {
     background-color: var(--branco);
     border: 1px solid var(--borda);
-    border-radius: 12px;
-    padding: 20px;
+    border-radius: 14px;
+    padding: 22px;
     text-align: center;
 }
 
 .beneficio-card:hover,
-.depoimento-card:hover {
+.depoimento-card:hover,
+.card-produto:hover {
     border-color: var(--vermelho);
 }
 
@@ -272,37 +293,28 @@ input[type="submit"]:hover,
 
 .depoimento-card::before {
     content: "“";
+    color: var(--vermelho);
     display: block;
     font-size: 50px;
-    color: var(--vermelho);
     line-height: 0.6;
 }
 
 .beneficio-card img {
     width: 45px;
     height: 45px;
-}
-
-.produtos-destaque {
-    background-color: #ffffff;
-    border: 1px solid #d6d0c4;
-    border-radius: 16px;
-    padding: 35px;
-    box-sizing: border-box;
+    margin: auto;
 }
 
 .produtos-destaque h2 {
-    margin: 0 0 12px 0;
+    margin: 0 0 12px;
     font-size: 24px;
-    font-weight: bold;
-    border-left: 6px solid #8b0000;
+    border-left: 6px solid var(--vermelho);
     padding-left: 12px;
 }
 
 .produtos-destaque > h3 {
-    margin: 0 0 28px 0;
+    margin: 0 0 28px;
     font-size: 26px;
-    font-weight: bold;
     text-align: center;
     background: linear-gradient(90deg, #009c3b, #ffdf00, #002776);
     background-clip: text;
@@ -313,30 +325,19 @@ input[type="submit"]:hover,
 
 .produtos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
-    gap: 35px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
     justify-content: center;
-    align-items: stretch;
+    gap: 30px;
 }
 
 .card-produto {
-    background-color: #ffffff;
-    border: 1px solid #d6d0c4;
-    border-radius: 16px;
-    padding: 24px;
-    box-sizing: border-box;
-    text-align: center;
     display: flex;
     flex-direction: column;
 }
 
-.card-produto:hover {
-    border-color: #8b0000;
-}
-
 .card-produto h3 {
-    margin: 0 0 18px 0;
-    min-height: 60px;
+    min-height: 55px;
+    margin: 0 0 18px;
     font-size: 18px;
     line-height: 1.3;
     display: flex;
@@ -347,84 +348,52 @@ input[type="submit"]:hover,
 .card-produto img {
     width: 100%;
     height: 300px;
-    background-color: #f7f7f7;
-    border-radius: 14px;
+    object-fit: contain;
+    background-color: var(--fundo-claro);
+    border-radius: 12px;
     padding: 14px;
-    box-sizing: border-box;
     margin-bottom: 18px;
 }
 
 .preco {
+    margin: 10px 0 18px;
+    color: var(--vermelho);
     font-size: 22px;
     font-weight: bold;
-    color: #8b0000;
-    margin: 10px 0 18px 0;
 }
 
 .card-produto button {
     width: 100%;
     margin-top: auto;
-    background-color: #8b0000;
-    color: #ffffff;
-    border: none;
-    border-radius: 10px;
-    padding: 13px 18px;
     font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.card-produto button:hover {
-    background-color: #a30000;
+    padding: 13px 18px;
 }
 
 .formulario-home {
-    text-align: center;
     max-width: 760px;
-    margin: 0 auto 55px auto;
+    margin: 0 auto 55px;
+    text-align: center;
 }
 
 .formulario-home form {
+    max-width: 500px;
+    margin: 20px auto 0;
     display: grid;
     gap: 12px;
-    max-width: 500px;
-    margin: 20px auto 0 auto;
     text-align: left;
-    background-color: var(--card);
-    border: 1px solid var(--borda);
-    border-radius: var(--raio);
-    padding: 30px;
-    box-sizing: border-box;
-}
-
-.formulario-home input,
-.formulario-home select {
-    width: 100%;
-    margin-top: 5px;
 }
 
 /* sobre */
 
-.cabecalho {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 25px;
-}
-
-.pagina-sobre {
+.pagina-sobre,
+.pagina-contato,
+.pagina-cadastro {
     display: flex;
     justify-content: center;
     padding: 40px 25px;
 }
 
 .sobre-card {
-    background-color: var(--card);
-    border: 1px solid var(--borda);
-    border-radius: var(--raio);
-    padding: 30px;
-    box-sizing: border-box;
     max-width: 900px;
 }
 
@@ -435,37 +404,15 @@ input[type="submit"]:hover,
     border-radius: 10px;
 }
 
-.links-sobre {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-top: 25px;
-}
-
 /* contato */
 
-.pagina-contato {
-    display: flex;
-    justify-content: center;
-    padding: 40px 25px;
-}
-
 .contato-card {
-    background-color: var(--card);
-    border: 1px solid var(--borda);
-    border-radius: var(--raio);
-    padding: 30px;
-    box-sizing: border-box;
     max-width: 700px;
     text-align: center;
 }
 
 .contatos {
-    display: flex;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
 }
 
 .contatos img {
@@ -473,82 +420,26 @@ input[type="submit"]:hover,
     height: 45px;
 }
 
-.links-contato {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin-top: 25px;
-}
-
-/* cadastro */
-
-.cabecalho-cadastro {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 25px;
-}
-
-.links-cadastro {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    align-items: center;
-}
+/* cadastro e login */
 
 .pagina-cadastro {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 25px;
 }
 
 .pagina-cadastro form {
-    background-color: var(--card);
-    border: 1px solid var(--borda);
-    border-radius: var(--raio);
-    padding: 30px;
-    box-sizing: border-box;
     width: 100%;
     max-width: 600px;
 }
 
-.pagina-cadastro input[type="text"],
-.pagina-cadastro input[type="email"],
-.pagina-cadastro input[type="password"],
-.pagina-cadastro input[type="date"],
-.pagina-cadastro input[type="tel"],
-.pagina-cadastro select,
-.pagina-cadastro textarea {
-    width: 100%;
-    margin-top: 5px;
-}
-
-.link-login {
-    display: flex;
+.link-login,
+.opcoesLogin {
     justify-content: space-between;
-    gap: 15px;
-    flex-wrap: wrap;
 }
 
 .cadastroIcon {
     width: 180px;
-    height: auto;
-    display: block;
-    margin: 30px auto 0 auto;
-}
-
-/* login */
-
-.opcoesLogin {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    flex-wrap: wrap;
+    margin: 30px auto 0;
 }
 
 .register-link {
@@ -559,19 +450,19 @@ input[type="submit"]:hover,
 
 .rodape {
     background-color: var(--vermelho);
+    color: var(--branco);
     padding: 25px;
     position: relative;
     min-height: 100px;
-    box-sizing: border-box;
-}
-
-.texto-rodape {
-    text-align: center;
 }
 
 .rodape p {
     color: var(--branco);
     margin: 5px 0;
+}
+
+.texto-rodape {
+    text-align: center;
 }
 
 .redes-rodape {
@@ -589,13 +480,7 @@ input[type="submit"]:hover,
     display: flex;
     align-items: center;
     gap: 6px;
-    font-weight: bold;
     font-size: 14px;
-}
-
-.redes-rodape a:hover {
-    color: var(--branco);
-    text-decoration: underline;
 }
 
 .redes-rodape img {
@@ -603,7 +488,7 @@ input[type="submit"]:hover,
     height: 18px;
 }
 
-/* responsividade */
+/* responsavidade no tablet */
 
 @media (max-width: 900px) {
     .topo,
@@ -619,14 +504,14 @@ input[type="submit"]:hover,
         width: 100%;
     }
 
+    .links-menu,
     .menu-categorias {
         justify-content: center;
-        gap: 12px 18px;
-        padding-top: 0;
     }
 
-    .links-menu {
-        justify-content: center;
+    .campo-busca {
+        width: 100%;
+        max-width: 330px;
     }
 
     .hero {
@@ -638,23 +523,19 @@ input[type="submit"]:hover,
     .depoimentos-grid {
         grid-template-columns: 1fr;
     }
-
-    .campo-busca {
-        width: 100%;
-        max-width: 320px;
-    }
 }
+
+/* responsavidade no celular */
 
 @media (max-width: 600px) {
     main {
         padding: 15px;
     }
 
-    .topo {
+    .topo,
+    .cabecalho,
+    .cabecalho-cadastro {
         padding: 20px 15px;
-        gap: 18px;
-        align-items: center;
-        text-align: center;
     }
 
     .logoLoja {
@@ -664,36 +545,12 @@ input[type="submit"]:hover,
     .menu-categorias {
         display: grid;
         grid-template-columns: repeat(2, max-content);
-        justify-content: center;
         gap: 12px 24px;
-        padding-top: 0;
     }
 
-    .menu-categorias a {
-        font-size: 14px;
-    }
-
-    .links-menu {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-    }
-
+    .menu-categorias a,
     .links-menu a {
         font-size: 14px;
-    }
-
-    .lado-direito,
-    .area-busca {
-        align-items: center;
-        width: 100%;
-    }
-
-    .campo-busca {
-        width: 100%;
-        max-width: 320px;
     }
 
     .hero,
@@ -703,20 +560,17 @@ input[type="submit"]:hover,
     .depoimentos,
     .sobre-card,
     .contato-card,
-    .pagina-cadastro form {
-        padding: 22px;
-    }
-
-    .formulario-home {
-        max-width: 100%;
-    }
-
+    .pagina-cadastro form,
     .formulario-home form {
         padding: 22px;
     }
 
     .hero h1 {
         font-size: 30px;
+    }
+
+    .hero-imagem img {
+        max-width: 260px;
     }
 
     .produtos {
@@ -731,37 +585,35 @@ input[type="submit"]:hover,
         height: 230px;
     }
 
+    .pagina-sobre,
+    .pagina-contato,
+    .pagina-cadastro {
+        padding: 30px 15px;
+    }
+
     .mapa-area iframe {
         height: 300px;
     }
 
+    .links-sobre,
+    .links-contato,
+    .links-cadastro,
     .link-login,
     .opcoesLogin {
         flex-direction: column;
     }
 
-    .links-sobre,
-    .links-contato,
-    .links-cadastro {
-        flex-direction: column;
-    }
-
     .rodape {
+        min-height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 15px;
-        min-height: auto;
+        text-align: center;
     }
 
     .redes-rodape {
         position: static;
-        flex-direction: column;
         align-items: center;
-        justify-content: center;
-    }
-
-    .texto-rodape {
-        text-align: center;
     }
 }
