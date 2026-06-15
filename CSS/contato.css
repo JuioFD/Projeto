@@ -1,0 +1,13 @@
+.contato-card {
+    max-width: 700px;
+    text-align: center;
+}
+
+.contatos {
+    justify-content: center;
+}
+
+.contatos img {
+    width: 45px;
+    height: 45px;
+}

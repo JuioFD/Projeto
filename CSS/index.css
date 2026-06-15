@@ -1,0 +1,190 @@
+.banner-home {
+    margin-bottom: 55px;
+    position: relative;
+}
+
+.banner-home img {
+    width: 100%;
+    border-radius: var(--raio);
+}
+
+.clique-botao-banner {
+    position: absolute;
+    left: 6%;
+    bottom: 7.5%;
+    width: 16.20%;
+    height: 12%;
+    display: block;
+    cursor: pointer;
+}
+
+.hero,
+.beneficios,
+.sobre-home,
+.produtos-destaque,
+.depoimentos,
+.sobre-card,
+.contato-card,
+.pagina-cadastro form,
+.formulario-home form {
+    background-color: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    padding: 30px;
+    box-shadow: var(--sombra);
+}
+
+.hero,
+.beneficios,
+.sobre-home,
+.produtos-destaque,
+.depoimentos {
+    margin-bottom: 55px;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero h1 {
+    margin-top: 0;
+    font-size: 42px;
+}
+
+.hero p,
+.sobre-home p,
+.depoimento-card p {
+    line-height: 1.6;
+}
+
+.hero-imagem img {
+    max-width: 360px;
+    margin: auto;
+}
+
+.beneficios-grid,
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.beneficio-card,
+.depoimento-card,
+.card-produto {
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    padding: 22px;
+    text-align: center;
+}
+
+.beneficio-card:hover,
+.depoimento-card:hover,
+.card-produto:hover {
+    border-color: var(--vermelho);
+}
+
+.beneficio-card::before {
+    content: "✓";
+    color: var(--vermelho);
+    display: block;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.depoimento-card::before {
+    content: "“";
+    color: var(--vermelho);
+    display: block;
+    font-size: 50px;
+    line-height: 0.6;
+}
+
+.beneficio-card img {
+    width: 45px;
+    height: 45px;
+    margin: auto;
+}
+
+.produtos-destaque h2 {
+    margin: 0 0 12px;
+    font-size: 24px;
+    border-left: 6px solid var(--vermelho);
+    padding-left: 12px;
+}
+
+.produtos-destaque > h3 {
+    margin: 0 0 28px;
+    font-size: 26px;
+    text-align: center;
+    background: linear-gradient(90deg, #009c3b, #ffdf00, #002776);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
+    justify-content: center;
+    gap: 30px;
+}
+
+.card-produto {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-produto h3 {
+    min-height: 55px;
+    margin: 0 0 18px;
+    font-size: 18px;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-produto img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background-color: var(--fundo-claro);
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 18px;
+}
+
+.preco {
+    margin: 10px 0 18px;
+    color: var(--vermelho);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.card-produto button {
+    width: 100%;
+    margin-top: auto;
+    font-size: 16px;
+    padding: 13px 18px;
+}
+
+.formulario-home {
+    max-width: 760px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.formulario-home form {
+    max-width: 500px;
+    margin: 20px auto 0;
+    display: grid;
+    gap: 12px;
+    text-align: left;
+}

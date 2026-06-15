@@ -1,0 +1,23 @@
+.pagina-cadastro {
+    flex-direction: column;
+    align-items: center;
+}
+
+.pagina-cadastro form {
+    width: 100%;
+    max-width: 600px;
+}
+
+.link-login,
+.opcoesLogin {
+    justify-content: space-between;
+}
+
+.cadastroIcon {
+    width: 180px;
+    margin: 30px auto 0;
+}
+
+.register-link {
+    margin-top: 15px;
+}

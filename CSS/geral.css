@@ -1,0 +1,414 @@
+/* geral */
+
+:root {
+    --vermelho: #8b0000;
+    --vermelho-hover: #a30000;
+    --texto: #222222;
+    --branco: #ffffff;
+    --borda: #d6d0c4;
+    --card: rgba(255, 255, 255, 0.95);
+    --fundo-claro: #f7f7f7;
+    --raio: 16px;
+    --sombra: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: arial, sans-serif;
+    color: var(--texto);
+    background-color: #f4f1ea;
+    background-image: url("../Imagens/logos/fundodaPagina.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding: 25px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: var(--vermelho);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--vermelho-hover);
+    text-decoration: underline;
+}
+
+button,
+input[type="submit"],
+.btn-cta,
+.links-sobre a,
+.links-contato a,
+.links-cadastro a {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover,
+input[type="submit"]:hover,
+.btn-cta:hover,
+.links-sobre a:hover,
+.links-contato a:hover,
+.links-cadastro a:hover {
+    background-color: var(--vermelho-hover);
+    color: var(--branco);
+    text-decoration: none;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    padding: 10px;
+    font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--vermelho);
+    border-color: var(--vermelho);
+}
+
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+    border-color: var(--vermelho);
+}
+
+/* cabeçalho */
+
+.topo,
+.cabecalho,
+.cabecalho-cadastro {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 25px;
+}
+
+.topo,
+.cabecalho-cadastro {
+    justify-content: space-between;
+}
+
+.logoTitulo {
+    margin: 0;
+    line-height: 0;
+}
+
+.logoLoja {
+    width: 220px;
+}
+
+.menu-categorias,
+.links-menu,
+.links-sobre,
+.links-contato,
+.links-cadastro,
+.contatos,
+.link-login,
+.opcoesLogin {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.menu-categorias {
+    justify-content: center;
+    flex: 1;
+}
+
+.menu-categorias a {
+    color: #111111;
+    position: relative;
+}
+
+.menu-categorias a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--vermelho);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.menu-categorias a:hover::after {
+    width: 100%;
+}
+
+.lado-direito,
+.area-busca {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.campo-busca {
+    width: 280px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    padding: 9px;
+}
+
+.campo-busca img {
+    width: 18px;
+    height: 18px;
+}
+
+#procura {
+    border: none;
+    padding: 0;
+    background: transparent;
+}
+
+#procura:focus {
+    outline: none;
+}
+
+/* cards gerais das páginas */
+
+.sobre-card,
+.contato-card,
+.pagina-cadastro form,
+.pagina-login form {
+    background-color: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    padding: 30px;
+    box-shadow: var(--sombra);
+}
+
+/* estrutura geral das páginas internas */
+
+.pagina-sobre,
+.pagina-contato,
+.pagina-cadastro,
+.pagina-login {
+    display: flex;
+    justify-content: center;
+    padding: 40px 25px;
+}
+
+.pagina-cadastro,
+.pagina-login {
+    flex-direction: column;
+    align-items: center;
+}
+
+.sobre-card {
+    max-width: 900px;
+}
+
+.contato-card {
+    max-width: 700px;
+    text-align: center;
+}
+
+.pagina-cadastro form,
+.pagina-login form {
+    width: 100%;
+    max-width: 600px;
+}
+
+.contatos {
+    justify-content: center;
+}
+
+.contatos img {
+    width: 45px;
+    height: 45px;
+}
+
+.link-login,
+.opcoesLogin {
+    justify-content: space-between;
+}
+
+.cadastroIcon {
+    width: 180px;
+    margin: 30px auto 0;
+}
+
+.register-link {
+    margin-top: 15px;
+}
+
+.mapa-area iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* rodapé */
+
+.rodape {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    padding: 25px;
+    position: relative;
+    min-height: 100px;
+}
+
+.rodape p {
+    color: var(--branco);
+    margin: 5px 0;
+}
+
+.texto-rodape {
+    text-align: center;
+}
+
+.redes-rodape {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.redes-rodape a {
+    color: var(--branco);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+
+.redes-rodape img {
+    width: 18px;
+    height: 18px;
+}
+
+/* responsividade no tablet */
+
+@media (max-width: 900px) {
+    .topo,
+    .cabecalho-cadastro {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lado-direito,
+    .area-busca {
+        align-items: center;
+        width: 100%;
+    }
+
+    .links-menu,
+    .menu-categorias {
+        justify-content: center;
+    }
+
+    .campo-busca {
+        width: 100%;
+        max-width: 330px;
+    }
+}
+
+/* responsividade no celular */
+
+@media (max-width: 600px) {
+    main {
+        padding: 15px;
+    }
+
+    .topo,
+    .cabecalho,
+    .cabecalho-cadastro {
+        padding: 20px 15px;
+    }
+
+    .logoLoja {
+        width: 170px;
+    }
+
+    .menu-categorias {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        gap: 12px 24px;
+    }
+
+    .menu-categorias a,
+    .links-menu a {
+        font-size: 14px;
+    }
+
+    .sobre-card,
+    .contato-card,
+    .pagina-cadastro form,
+    .pagina-login form {
+        padding: 22px;
+    }
+
+    .pagina-sobre,
+    .pagina-contato,
+    .pagina-cadastro,
+    .pagina-login {
+        padding: 30px 15px;
+    }
+
+    .mapa-area iframe {
+        height: 300px;
+    }
+
+    .links-sobre,
+    .links-contato,
+    .links-cadastro,
+    .link-login,
+    .opcoesLogin {
+        flex-direction: column;
+    }
+
+    .rodape {
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .redes-rodape {
+        position: static;
+        align-items: center;
+    }
+}
