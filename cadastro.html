@@ -50,14 +50,14 @@
             <br><br>
 
             <label for="cadData">Data de Nascimento:</label> <br>
-            <input type="date" id="cadData" name="cadData" required
-                oninvalid="this.setCustomValidity('Insira sua data de nascimento')"
+            <input type="date" id="cadData" name="cadData" required max="2013-06-22"
+                oninvalid="this.setCustomValidity('Insira uma data de nascimento válida. Você deve ter pelo menos 13 anos de idade.')"
                 oninput="this.setCustomValidity('')">
             <br><br>
 
-            <label for="cadCEP">CEP:</label> <br>
-            <input type="text" id="cadCEP" name="cadCEP" placeholder="xxxxx-xxx" maxlength="9"
-                pattern="[0-9]{5}-[0-9]{3}" required oninvalid="this.setCustomValidity('Insira seu CEP corretamente')"
+            <label for="cadCidade"> Cidade/Estado:</label> <br>
+            <input type="text" id="cadCidade" name="cadCidade" placeholder="Cidade - (ESTADO)" required
+                oninvalid="this.setCustomValidity('Insira o nome da sua cidade')"
                 oninput="this.setCustomValidity('')">
             <br><br>
 
@@ -91,10 +91,6 @@
             <input type="checkbox" name="preferencias" value="Futebol"> Futebol <br>
             <input type="checkbox" name="preferencias" value="Nike"> Nike <br>
             <input type="checkbox" name="preferencias" value="Suplementos"> Suplementos <br>
-            <br><br>
-
-            <label for="feedbacks">Feedbacks: (opcional)</label> <br><br>
-            <textarea name="feedbacks" id="feedbacks" rows="6" cols="50"></textarea>
             <br><br>
 
             <div class="link-login">

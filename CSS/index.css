@@ -1,3 +1,5 @@
+/* index */
+
 .banner-home {
     margin-bottom: 55px;
     position: relative;
@@ -18,14 +20,13 @@
     cursor: pointer;
 }
 
+/* seções */
+
 .hero,
 .beneficios,
 .sobre-home,
 .produtos-destaque,
 .depoimentos,
-.sobre-card,
-.contato-card,
-.pagina-cadastro form,
 .formulario-home form {
     background-color: var(--card);
     border: 1px solid var(--borda);
@@ -41,6 +42,8 @@
 .depoimentos {
     margin-bottom: 55px;
 }
+
+/* hero */
 
 .hero {
     display: grid;
@@ -65,6 +68,8 @@
     margin: auto;
 }
 
+/* benefícios e depoimentos */
+
 .beneficios-grid,
 .depoimentos-grid {
     display: grid;
@@ -74,8 +79,7 @@
 }
 
 .beneficio-card,
-.depoimento-card,
-.card-produto {
+.depoimento-card {
     background-color: var(--branco);
     border: 1px solid var(--borda);
     border-radius: 14px;
@@ -84,8 +88,7 @@
 }
 
 .beneficio-card:hover,
-.depoimento-card:hover,
-.card-produto:hover {
+.depoimento-card:hover {
     border-color: var(--vermelho);
 }
 
@@ -111,6 +114,8 @@
     margin: auto;
 }
 
+/* destaque */
+
 .produtos-destaque h2 {
     margin: 0 0 12px;
     font-size: 24px;
@@ -129,51 +134,7 @@
     -webkit-text-fill-color: transparent;
 }
 
-.produtos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
-    justify-content: center;
-    gap: 30px;
-}
-
-.card-produto {
-    display: flex;
-    flex-direction: column;
-}
-
-.card-produto h3 {
-    min-height: 55px;
-    margin: 0 0 18px;
-    font-size: 18px;
-    line-height: 1.3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.card-produto img {
-    width: 100%;
-    height: 300px;
-    object-fit: contain;
-    background-color: var(--fundo-claro);
-    border-radius: 12px;
-    padding: 14px;
-    margin-bottom: 18px;
-}
-
-.preco {
-    margin: 10px 0 18px;
-    color: var(--vermelho);
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.card-produto button {
-    width: 100%;
-    margin-top: auto;
-    font-size: 16px;
-    padding: 13px 18px;
-}
+/* formulário da home */
 
 .formulario-home {
     max-width: 760px;
@@ -189,79 +150,59 @@
     text-align: left;
 }
 
-/* responsividade index */
+/* tablet */
 
 @media (max-width: 900px) {
-    body .hero {
+    .hero {
         grid-template-columns: 1fr;
         text-align: center;
     }
 
-    body .hero h1 {
+    .hero h1 {
         font-size: 34px;
     }
 
-    body .beneficios-grid,
-    body .depoimentos-grid {
+    .beneficios-grid,
+    .depoimentos-grid {
         grid-template-columns: 1fr 1fr;
-    }
-
-    body .produtos {
-        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     }
 }
 
+/* celular */
+
 @media (max-width: 600px) {
-    body .banner-home {
+    .banner-home {
         margin-bottom: 35px;
     }
 
-    body .hero,
-    body .beneficios,
-    body .sobre-home,
-    body .produtos-destaque,
-    body .depoimentos,
-    body .formulario-home form {
+    .hero,
+    .beneficios,
+    .sobre-home,
+    .produtos-destaque,
+    .depoimentos,
+    .formulario-home form {
         padding: 20px;
         margin-bottom: 35px;
     }
 
-    body .hero h1 {
+    .hero h1 {
         font-size: 28px;
     }
 
-    body .beneficios-grid,
-    body .depoimentos-grid {
+    .beneficios-grid,
+    .depoimentos-grid {
         grid-template-columns: 1fr;
         gap: 18px;
     }
 
-    body .produtos-destaque h2 {
+    .produtos-destaque h2 {
         font-size: 22px;
         line-height: 1.2;
         overflow-wrap: break-word;
     }
 
-    body .produtos-destaque > h3 {
+    .produtos-destaque > h3 {
         font-size: 22px;
         line-height: 1.2;
-    }
-
-    body .produtos {
-        grid-template-columns: 1fr;
-        gap: 22px;
-    }
-
-    body .card-produto {
-        padding: 18px;
-    }
-
-    body .card-produto h3 {
-        min-height: auto;
-        font-size: 17px;
-    }
-
-    body .card-produto img {
-        height: 230px;
     }
 }

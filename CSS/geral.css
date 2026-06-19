@@ -12,6 +12,8 @@
     --sombra: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
+/* base */
+
 * {
     box-sizing: border-box;
 }
@@ -52,6 +54,8 @@ a:hover {
     text-decoration: underline;
 }
 
+/* botões */
+
 button,
 input[type="submit"],
 .btn-cta,
@@ -78,6 +82,8 @@ input[type="submit"]:hover,
     text-decoration: none;
 }
 
+/* formulários */
+
 input,
 select,
 textarea {
@@ -86,6 +92,11 @@ textarea {
     border-radius: 6px;
     padding: 10px;
     font: inherit;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
 }
 
 input:focus,
@@ -104,7 +115,8 @@ textarea:invalid:not(:placeholder-shown) {
 
 .topo,
 .cabecalho,
-.cabecalho-cadastro {
+.cabecalho-cadastro,
+.cabecalho-login {
     display: flex;
     align-items: center;
     gap: 25px;
@@ -113,17 +125,30 @@ textarea:invalid:not(:placeholder-shown) {
 }
 
 .topo,
-.cabecalho-cadastro {
+.cabecalho-cadastro,
+.cabecalho-login {
     justify-content: space-between;
 }
 
-.logoTitulo {
+.logoTitulo,
+.logoLogin {
     margin: 0;
     line-height: 0;
 }
 
 .logoLoja {
     width: 220px;
+}
+
+.logoTitulo a,
+.logoLogin a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.logoTitulo a:hover,
+.logoLogin a:hover {
+    text-decoration: none;
 }
 
 .menu-categorias,
@@ -200,7 +225,7 @@ textarea:invalid:not(:placeholder-shown) {
     outline: none;
 }
 
-/* cards gerais das páginas */
+/* cards internos */
 
 .sobre-card,
 .contato-card,
@@ -213,7 +238,7 @@ textarea:invalid:not(:placeholder-shown) {
     box-shadow: var(--sombra);
 }
 
-/* estrutura geral das páginas internas */
+/* páginas internas */
 
 .pagina-sobre,
 .pagina-contato,
@@ -317,11 +342,13 @@ textarea:invalid:not(:placeholder-shown) {
     height: 18px;
 }
 
-/* responsividade no tablet */
+/* tablet */
 
 @media (max-width: 900px) {
     .topo,
-    .cabecalho-cadastro {
+    .cabecalho,
+    .cabecalho-cadastro,
+    .cabecalho-login {
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -334,6 +361,7 @@ textarea:invalid:not(:placeholder-shown) {
     }
 
     .links-menu,
+    .links-cadastro,
     .menu-categorias {
         justify-content: center;
     }
@@ -344,16 +372,21 @@ textarea:invalid:not(:placeholder-shown) {
     }
 }
 
-/* responsividade no celular */
+/* celular */
 
 @media (max-width: 600px) {
+    body {
+        background-attachment: scroll;
+    }
+
     main {
         padding: 15px;
     }
 
     .topo,
     .cabecalho,
-    .cabecalho-cadastro {
+    .cabecalho-cadastro,
+    .cabecalho-login {
         padding: 20px 15px;
     }
 
@@ -368,7 +401,8 @@ textarea:invalid:not(:placeholder-shown) {
     }
 
     .menu-categorias a,
-    .links-menu a {
+    .links-menu a,
+    .links-cadastro a {
         font-size: 14px;
     }
 

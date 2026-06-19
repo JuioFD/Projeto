@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/geral.css">
-    <link rel="stylesheet" href="/CSS/categorias.css">
+    <link rel="stylesheet" href="/CSS/produtos.css">
 
     <title>Copa do Mundo</title>
 
@@ -15,7 +15,9 @@
 
         <div class="texto-topo">
             <h2 id="tituloPrincipal" class="logoTitulo">
-                <img src="../Imagens/logos/logo.png" alt="logo da noventa minutos" class="logoLoja">
+                <a href="../index.html" aria-label="voltar para a página inicial">
+                    <img src="../Imagens/logos/logo.png" alt="logo da noventa minutos" class="logoLoja">
+                </a>
             </h2>
         </div>
 
@@ -48,6 +50,67 @@
         </div>
 
     </header>
+
+    <main>
+
+        <div class="produtos">
+
+            <article class="card-produto">
+                <h3>Camisa Seleção Brasileira 2026</h3>
+                <img src="../Imagens/produtos/CamisaSelecao1.png" alt="camisa seleção brasileira 2026">
+                <p class="preco">R$ 399,99</p>
+                <button data-id="1" data-nome="camisa-selecao-brasileira-2026" data-preco="399">
+                    Comprar
+                </button>
+            </article>
+
+            <article class="card-produto">
+                <h3>Camisa Seleção Francesa 2026</h3>
+                <img src="../Imagens/produtos/CamisaSelecao2.png" alt="camisa seleção francesa 2026">
+                <p class="preco">R$ 349,99</p>
+                <button data-id="2" data-nome="camisa-selecao-francesa-2026" data-preco="349">
+                    Comprar
+                </button>
+            </article>
+
+            <article class="card-produto">
+                <h3>Camisa Seleção Espanhola 2026</h3>
+                <img src="../Imagens/produtos/CamisaSelecao3.png" alt="camisa seleção espanhola 2026">
+                <p class="preco">R$ 349,99</p>
+                <button data-id="3" data-nome="camisa-selecao-espanhola-2026" data-preco="349">
+                    Comprar
+                </button>
+            </article>
+
+            <article class="card-produto">
+                <h3>Camisa Seleção Argentina 2026</h3>
+                <img src="../Imagens/produtos/CamisaSelecao4.png" alt="camisa seleção argentina 2026">
+                <p class="preco">R$ 349,99</p>
+                <button data-id="4" data-nome="camisa-selecao-argentina-2026" data-preco="349">
+                    Comprar
+                </button>
+            </article>
+
+    </main>
+
+    <footer class="rodape">
+
+        <div class="redes-rodape">
+            <a href="https://www.instagram.com/juliodossi_" target="_blank">
+                <img src="../Imagens/icons/instaicon.png" alt="instagram">
+            </a>
+            <a href="https://wa.me/5527996681009" target="_blank">
+                <img src="../Imagens/icons/wppicon.png" alt="whatsapp">
+            </a>
+            <a href="https://x.com/juio_fd" target="_blank">
+                <img src="../Imagens/icons/xicon.png" alt="twitter">
+            </a>
+        </div>
+        <div class="texto-rodape">
+            <p>Noventa Minutos - Todos os Direitos Reservados ©</p>
+            <p>Roupas e artigos esportivos com qualidade e bom preço.</p>
+        </div>
+    </footer>
 </body>
 
 </html>

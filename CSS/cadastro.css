@@ -1,23 +1,29 @@
 .pagina-cadastro,
 .pagina-login {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 40px 20px;
 }
 
+.cabecalho-cadastro,
 .cabecalho-login {
     width: 100%;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 10px;
-    padding: 45px 20px 20px;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 35px 60px 20px;
+    flex-wrap: wrap;
 }
 
+.logoTitulo,
 .logoLogin {
     margin: 0;
     line-height: 0;
 }
 
+.logoLoja,
 .logoLogin img {
     width: 180px;
 }
@@ -26,20 +32,61 @@
     margin-left: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 15px;
     flex-wrap: wrap;
 }
 
 .pagina-login form,
-.pagina-cadastro form {
+.pagina-cadastro form,
+.cadastrar {
     width: 100%;
-    max-width: 600px;
+    max-width: 620px;
 }
 
+.pagina-cadastro h1,
 .pagina-login h1 {
     margin: 0 0 25px;
     text-align: center;
+    font-size: 26px;
+}
+
+#cadastroIcon {
+    margin: 0;
+    line-height: 0;
+}
+
+.cadastroIcon {
+    width: 150px;
+    margin: 20px auto 35px;
+}
+
+.pagina-cadastro label,
+.pagina-login label {
+    font-weight: bold;
+}
+
+.pagina-cadastro input,
+.pagina-cadastro select,
+.pagina-cadastro textarea,
+.pagina-login input {
+    margin-top: 6px;
+}
+
+.pagina-cadastro input[type="radio"],
+.pagina-cadastro input[type="checkbox"],
+.pagina-login input[type="checkbox"] {
+    width: auto;
+    margin: 8px 8px 8px 0;
+    accent-color: var(--vermelho);
+}
+
+.pagina-cadastro textarea {
+    resize: vertical;
+}
+
+.pagina-cadastro select {
+    cursor: pointer;
 }
 
 .link-login,
@@ -49,6 +96,12 @@
     align-items: center;
     gap: 15px;
     margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.link-login p,
+.register-link p {
+    margin: 0;
 }
 
 .lembrar-senha {
@@ -59,17 +112,49 @@
 
 .lembrar-senha input {
     width: auto;
-}
-
-.cadastroIcon {
-    width: 180px;
-    margin: 30px auto 0;
+    margin: 0;
 }
 
 .register-link {
-    margin-top: 15px;
+    margin-top: 18px;
 }
 
-.register-link p {
-    margin: 0;
+@media (max-width: 700px) {
+    .cabecalho-cadastro,
+    .cabecalho-login {
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px 20px 20px;
+        text-align: center;
+    }
+
+    .links-cadastro {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .pagina-cadastro,
+    .pagina-login {
+        padding: 30px 15px;
+    }
+
+    .pagina-cadastro h1,
+    .pagina-login h1 {
+        font-size: 22px;
+    }
+
+    .cadastroIcon {
+        width: 130px;
+    }
+
+    .link-login,
+    .opcoesLogin {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .link-login input[type="submit"] {
+        width: 100%;
+    }
 }
