@@ -2,58 +2,63 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-        <link rel="stylesheet" href="CSS/geral.css">
-        <link rel="stylesheet" href="CSS/cadastro.css">
+    <title>login</title>
+    <link rel="stylesheet" href="CSS/geral.css">
+    <link rel="stylesheet" href="CSS/cadastro.css">
 </head>
 
 <body>
-    <main class="pagina-cadastro">
 
-        <div class="cabecalho-cadastro">
-            <h1>Login</h1>
-        </div>
+    <header class="cabecalho-login">
+        <h2 class="logoLogin">
+            <img src="Imagens/logos/loginlogo.png" alt="logo da página de login" class="logoLoja">
+        </h2>
 
-        <form id="cadastro">
-            <label for="logEmail"> E-mail:</label> <br>
+        <nav class="links-cadastro">
+            <a href="index.html">voltar à página inicial</a>
+            <a href="contato.html">contato</a>
+            <a href="sobre.html">sobre nós</a>
+            <a href="cadastro.html">cadastre-se</a>
+        </nav>
+    </header>
+
+    <main class="pagina-login">
+
+        <form id="login">
+            <h1>login</h1>
+
+            <label for="logEmail">e-mail:</label>
             <input type="email" id="logEmail" name="logEmail" placeholder="exemplo@dominio.com" required
-                oninvalid="this.setCustomValidity('Insira um e-mail válido')" oninput="this.setCustomValidity('')">
+                oninvalid="this.setCustomValidity('insira um e-mail válido')" oninput="this.setCustomValidity('')">
+
             <br><br>
 
-            <label for="logSenha">Senha:</label> <br>
-            <input type="password" name="logSenha" placeholder="mínimo 8 caracteres" required minlength="8"
-                oninvalid="this.setCustomValidity('Sua senha precisa ter pelo menos 8 caracteres')"
+            <label for="logSenha">senha:</label>
+            <input type="password" id="logSenha" name="logSenha" placeholder="mínimo 8 caracteres" required
+                minlength="8" oninvalid="this.setCustomValidity('sua senha precisa ter pelo menos 8 caracteres')"
                 oninput="this.setCustomValidity('')">
+
             <br><br>
 
-            <input type="submit" value="Entrar"> <br><br>
+            <input type="submit" value="entrar">
 
             <div class="opcoesLogin">
-                <label>
+                <label class="lembrar-senha">
                     <input type="checkbox">
-                    Lembrar senha
+                    lembrar senha
                 </label>
-                <a href="#"> Esqueci minha senha</a>
-            </div>
 
+                <a href="#">esqueci minha senha</a>
+            </div>
 
             <div class="register-link">
-                <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+                <p>não tem uma conta? <a href="cadastro.html">cadastre-se</a></p>
             </div>
         </form>
+
     </main>
-
-    <section>
-        <div class="links-sobre">
-            <a href="index.html">Voltar à página inicial</a>
-            <a href="contato.html">Contato</a>
-            <a href="cadastro.html">Cadastre-se</a>
-            <a href="sobre.html"> Sobre nós</a>
-        </div>
-    </section>
-
 
     <footer class="rodape">
 
@@ -61,18 +66,23 @@
             <a href="https://www.instagram.com/juliodossi_" target="_blank">
                 <img src="Imagens/icons/instaicon.png" alt="instagram">
             </a>
+
             <a href="https://wa.me/5527996681009" target="_blank">
                 <img src="Imagens/icons/wppicon.png" alt="whatsapp">
             </a>
+
             <a href="https://x.com/juio_fd" target="_blank">
                 <img src="Imagens/icons/xicon.png" alt="x">
             </a>
         </div>
+
         <div class="texto-rodape">
-            <p>Noventa Minutos - Todos os Direitos Reservados ©</p>
+            <p>Noventa minutos - Todos os direitos reservados ©</p>
             <p>Roupas e artigos esportivos com qualidade e bom preço.</p>
         </div>
+
     </footer>
+
 </body>
 
 </html>

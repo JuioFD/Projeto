@@ -1,16 +1,64 @@
-.pagina-cadastro {
+.pagina-cadastro,
+.pagina-login {
     flex-direction: column;
     align-items: center;
 }
 
+.cabecalho-login {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 45px 20px 20px;
+}
+
+.logoLogin {
+    margin: 0;
+    line-height: 0;
+}
+
+.logoLogin img {
+    width: 180px;
+}
+
+.links-cadastro {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.pagina-login form,
 .pagina-cadastro form {
     width: 100%;
     max-width: 600px;
 }
 
+.pagina-login h1 {
+    margin: 0 0 25px;
+    text-align: center;
+}
+
 .link-login,
 .opcoesLogin {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 18px;
+}
+
+.lembrar-senha {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lembrar-senha input {
+    width: auto;
 }
 
 .cadastroIcon {
@@ -20,4 +68,8 @@
 
 .register-link {
     margin-top: 15px;
+}
+
+.register-link p {
+    margin: 0;
 }
