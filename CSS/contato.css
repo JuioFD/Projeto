@@ -1,13 +1,116 @@
-.contato-card {
-    max-width: 700px;
-    text-align: center;
+.pagina-contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 25px;
+}
+
+.FAQ {
+    width: 100%;
+    max-width: 850px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #d6d0c4;
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.FAQ h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+.FAQ h3 {
+    margin: 22px 0 8px;
+    font-size: 19px;
+}
+
+.FAQ p {
+    margin: 0;
+    line-height: 1.5;
 }
 
 .contatos {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.contatos a {
+    display: inline-block;
 }
 
 .contatos img {
     width: 45px;
     height: 45px;
+    object-fit: contain;
+}
+
+.links-contato {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* tablet */
+
+@media (max-width: 900px) {
+    .pagina-contato {
+        padding: 35px 20px;
+    }
+
+    .FAQ {
+        max-width: 700px;
+    }
+
+    .links-contato {
+        margin-left: 0;
+        justify-content: center;
+    }
+}
+
+/* celular */
+
+@media (max-width: 600px) {
+    .pagina-contato {
+        padding: 30px 15px;
+    }
+
+    .FAQ {
+        width: 100%;
+        padding: 22px;
+    }
+
+    .FAQ h2 {
+        font-size: 22px;
+    }
+
+    .FAQ h3 {
+        font-size: 17px;
+    }
+
+    .FAQ p {
+        font-size: 15px;
+    }
+
+    .contatos {
+        gap: 15px;
+        margin-top: 22px;
+    }
+
+    .contatos img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .links-contato {
+        flex-direction: column;
+        gap: 10px;
+    }
 }

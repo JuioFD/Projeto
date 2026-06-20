@@ -1,3 +1,18 @@
+/* cadastro e login */
+
+.pagina-cadastro,
+.pagina-login {
+    display: flex;
+    justify-content: center;
+    padding: 40px 25px;
+}
+
+.pagina-cadastro,
+.pagina-login {
+    flex-direction: column;
+    align-items: center;
+}
+
 .pagina-cadastro,
 .pagina-login {
     display: flex;
@@ -5,6 +20,8 @@
     align-items: center;
     padding: 40px 20px;
 }
+
+/* cabeçalho */
 
 .cabecalho-cadastro,
 .cabecalho-login {
@@ -28,6 +45,17 @@
     width: 180px;
 }
 
+/* links */
+
+.links-cadastro,
+.link-login,
+.opcoesLogin {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
 .links-cadastro {
     margin-left: auto;
     display: flex;
@@ -35,6 +63,34 @@
     justify-content: flex-end;
     gap: 15px;
     flex-wrap: wrap;
+}
+
+.link-login,
+.opcoesLogin {
+    justify-content: space-between;
+}
+
+.link-login,
+.opcoesLogin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.link-login p,
+.register-link p {
+    margin: 0;
+}
+
+/* formulário */
+
+.pagina-cadastro form,
+.pagina-login form {
+    width: 100%;
+    max-width: 600px;
 }
 
 .pagina-login form,
@@ -49,16 +105,6 @@
     margin: 0 0 25px;
     text-align: center;
     font-size: 26px;
-}
-
-#cadastroIcon {
-    margin: 0;
-    line-height: 0;
-}
-
-.cadastroIcon {
-    width: 150px;
-    margin: 20px auto 35px;
 }
 
 .pagina-cadastro label,
@@ -89,20 +135,7 @@
     cursor: pointer;
 }
 
-.link-login,
-.opcoesLogin {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    margin-top: 18px;
-    flex-wrap: wrap;
-}
-
-.link-login p,
-.register-link p {
-    margin: 0;
-}
+/* login */
 
 .lembrar-senha {
     display: flex;
@@ -116,10 +149,33 @@
 }
 
 .register-link {
+    margin-top: 15px;
+}
+
+.register-link {
     margin-top: 18px;
 }
 
-@media (max-width: 700px) {
+/* imagem */
+
+#cadastroIcon {
+    margin: 0;
+    line-height: 0;
+}
+
+.cadastroIcon {
+    width: 180px;
+    margin: 30px auto 0;
+}
+
+.cadastroIcon {
+    width: 150px;
+    margin: 20px auto 35px;
+}
+
+/* tablet */
+
+@media (max-width: 900px) {
     .cabecalho-cadastro,
     .cabecalho-login {
         flex-direction: column;
@@ -135,6 +191,15 @@
 
     .pagina-cadastro,
     .pagina-login {
+        padding: 35px 20px;
+    }
+}
+
+/* celular */
+
+@media (max-width: 600px) {
+    .pagina-cadastro,
+    .pagina-login {
         padding: 30px 15px;
     }
 
@@ -147,6 +212,11 @@
         width: 130px;
     }
 
+    .links-cadastro {
+        flex-direction: column;
+        gap: 10px;
+    }
+
     .link-login,
     .opcoesLogin {
         flex-direction: column;
@@ -154,7 +224,12 @@
         text-align: center;
     }
 
-    .link-login input[type="submit"] {
+    .link-login input[type="submit"],
+    .opcoesLogin input[type="submit"] {
         width: 100%;
+    }
+
+    .lembrar-senha {
+        justify-content: center;
     }
 }

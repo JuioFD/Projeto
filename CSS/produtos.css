@@ -53,3 +53,47 @@
     padding: 13px 18px;
 }
 
+/* tablet */
+
+@media (max-width: 900px) {
+    .produtos {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 300px));
+        gap: 25px;
+    }
+
+    .card-produto img {
+        height: 260px;
+    }
+}
+
+/* celular */
+
+@media (max-width: 600px) {
+    .produtos {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .card-produto {
+        padding: 18px;
+    }
+
+    .card-produto h3 {
+        min-height: auto;
+        font-size: 17px;
+    }
+
+    .card-produto img {
+        height: 240px;
+        padding: 12px;
+    }
+
+    .preco {
+        font-size: 20px;
+    }
+
+    .card-produto button {
+        font-size: 15px;
+        padding: 12px 16px;
+    }
+}
