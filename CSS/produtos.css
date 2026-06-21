@@ -6,7 +6,7 @@
 }
 
 .card-produto {
-    background-color: var(--card);
+    background-color: var(--branco);
     border: 1px solid var(--borda);
     border-radius: 14px;
     padding: 22px;
