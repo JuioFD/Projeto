@@ -84,8 +84,7 @@ input[type="submit"]:hover,
 /* formulários */
 
 input,
-select,
-textarea {
+select {
     width: 100%;
     border: 1px solid var(--borda);
     border-radius: 6px;
@@ -99,14 +98,8 @@ input[type="checkbox"] {
 }
 
 input:focus,
-select:focus,
-textarea:focus {
+select:focus {
     outline: 2px solid var(--vermelho);
-    border-color: var(--vermelho);
-}
-
-input:invalid:not(:placeholder-shown),
-textarea:invalid:not(:placeholder-shown) {
     border-color: var(--vermelho);
 }
 
